@@ -1,0 +1,35 @@
+<div class="hero-image">
+  <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
+    style="height: 252px; width: 1349px; background-image: url('assets/image/banner/banner.jpg');">
+  </div>
+</div>
+<div class="uk-section uk-section-default">
+  <div class="uk-container">
+    <h3 class="house">Fresh recommendations</h3>
+    <div class="uk-margin uk-grid-small uk-child-width-1-4@m uk-text-center" uk-grid>
+      <span [title]="product.desc + ' product details'" *ngFor="let product of products">
+        <div>
+          <div class="uk-animation-toggle" tabindex="0">
+            <div class="uk-margin uk-card uk-card-default uk-card-hover ">
+              <div class="uk-card-media-top">
+                <img class="list-img" src="{{product.images}}" alt="">
+              </div>
+              <div class="uk-card-body">
+                <!-- <div class="uk-card-badge yellow">FEATURED</div> -->
+                <h3 class="uk-card-title price">&#8377;{{product.price}}</h3>
+                <p class="desc">{{product.desc}}</p>
+                <div class="last">
+                  <span class="ploc">{{product.location}}</span>
+                  <span class="pdate">{{product.pdate}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>&copy; Copyright 2020</p>
+</footer>
