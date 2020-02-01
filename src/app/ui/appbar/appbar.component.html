@@ -1,59 +1,56 @@
-<div id="page-wrapper">
-  <div class="uk-navbar-container">
-    <div class="uk-container uk-container-expand">
-      <div class="uk-navbar">
-        <div class="uk-navbar-left">
-          <div class="logo">
-            <div class="_2r6hS hJUTK">
-              <a class="" rel="" data-aut-id="btnOlxLogo" href="/">
-                <svg width="48px" height="48px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd">
-                  <path class="rui-77aaa"
-                    d="M672.073 786.477h-139.037v-585.943h139.037v585.943zM483.019 493.596c0 133.44-108.16 241.419-241.419 241.419s-241.6-108.16-241.6-241.419c0-133.259 108.16-241.419 241.419-241.419s241.6 107.98 241.6 241.419zM314.73 493.596c0-40.447-32.683-73.13-73.13-73.13s-73.13 32.683-73.13 73.13c0 40.447 32.683 73.13 73.13 73.13s73.13-32.683 73.13-73.13zM1023.639 346.794h-92.27l-54.17 54.17-54.17-54.17h-92.27v93.895l53.448 53.448-53.448 53.448v92.631h93.715l52.906-52.906 52.906 52.906h93.715v-92.631l-53.448-53.448 53.448-53.448v-93.895h-0.361z">
-                  </path>
-                </svg></a></div>
-          </div>
-          <div class="loc">
-            <select formControlName="LocationId">
-              <option value="null">All Location</option>
-              <option>Delhi</option>
-              <option>mumbai</option>
-              <option>Rajasthan</option>
-              <option>Haryana</option>
-              <option>Punjab</option>
-            </select>
-          </div>
-          <div class="search">
-            <form class="">
+<form [formGroup]="filterForm">
+  <div id="page-wrapper">
+    <div class="uk-navbar-container">
+      <div class="uk-container uk-container-expand">
+        <div class="uk-navbar">
+          <div class="uk-navbar-left">
+            <div class="logo">
+              <div class="_2r6hS hJUTK">
+                <a class="" rel="" data-aut-id="btnOlxLogo" href="/">
+                  <svg width="48px" height="48px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                    fill-rule="evenodd">
+                    <path class="rui-77aaa"
+                      d="M672.073 786.477h-139.037v-585.943h139.037v585.943zM483.019 493.596c0 133.44-108.16 241.419-241.419 241.419s-241.6-108.16-241.6-241.419c0-133.259 108.16-241.419 241.419-241.419s241.6 107.98 241.6 241.419zM314.73 493.596c0-40.447-32.683-73.13-73.13-73.13s-73.13 32.683-73.13 73.13c0 40.447 32.683 73.13 73.13 73.13s73.13-32.683 73.13-73.13zM1023.639 346.794h-92.27l-54.17 54.17-54.17-54.17h-92.27v93.895l53.448 53.448-53.448 53.448v92.631h93.715l52.906-52.906 52.906 52.906h93.715v-92.631l-53.448-53.448 53.448-53.448v-93.895h-0.361z">
+                    </path>
+                  </svg></a></div>
+            </div>
+            <div class="loc">
+              <select formControlName="LocationId">
+                <option value="null">All Location</option>
+                <option *ngFor="let location of location" [value]="location.id" [innerHtml]="location.name"></option>
+              </select>
+            </div>
+            <div class="search">
               <input class="uk-search-input" type="search" placeholder="Find Cars, Mobile Phones and more...">
               <span class="searchicon" uk-search-icon></span>
-            </form>
+            </div>
+          </div>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <div>
+                <li>
+                  <a [routerLink]="['login']" class="uk-navbar-item login"><span
+                      uk-icon="sign-out"></span>SignIn/SignUp</a>
+                </li>
+              </div>
+            </ul>
           </div>
         </div>
-        <div class="uk-navbar-right">
-          <ul class="uk-navbar-nav">
-            <div>
-              <li>
-                <a [routerLink]="['login']" class="uk-navbar-item login"><span
-                    uk-icon="sign-out"></span>SignIn/SignUp</a>
-              </li>
-            </div>
-          </ul>
+      </div>
+    </div>
+    <div class="middle-nav">
+      <div class="uk-container">
+        <div class="category">
+          <div class="cat">All CATEGORIES</div>
+          <div class="cat">Cars</div>
+          <div class="cat">Motorcycles</div>
+          <div class="cat">Mobile Phones</div>
+          <div class="cat">For Sale:Houses & Apartment</div>
+          <div class="cat">Scooters</div>
+          <div class="cat">Commercial Vehicles</div>
+          <div class="cat">For Rent:Houses & Apartment</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="middle-nav">
-    <div class="uk-container">
-      <div class="category">
-        <div class="cat">All CATEGORIES</div>
-        <div class="cat">Cars</div>
-        <div class="cat">Motorcycles</div>
-        <div class="cat">Mobile Phones</div>
-        <div class="cat">For Sale:Houses & Apartment</div>
-        <div class="cat">Scooters</div>
-        <div class="cat">Commercial Vehicles</div>
-        <div class="cat">For Rent:Houses & Apartment</div>
-      </div>
-    </div>
-  </div>
-</div>
+</form>
