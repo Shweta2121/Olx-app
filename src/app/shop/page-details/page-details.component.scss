@@ -1,0 +1,134 @@
+img.uk-cover {
+  // padding: 70px 20px 70px 20px;
+  color: rgba(0, 47, 52, .36);
+}
+
+.image-detail {
+  margin: 0px 8px 30px 6px;
+  padding: 0;
+  padding: 20px;
+  border: 1px solid rgba(0, 47, 52, 0.2);
+  position: relative;
+}
+
+.desc-cont {
+  word-break: break-word;
+  margin: 0;
+  color: #002f34;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 22px;
+  color: #002f34;
+}
+
+.desscription {
+  margin: -10px 8px 30px 6px;
+  padding: 0;
+  padding: 20px;
+  border: 1px solid rgba(0, 47, 52, 0.2);
+}
+
+h3.uk-card-title.uk-border-rounded {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 8px;
+  line-height: 32px;
+}
+
+.bottom-div {
+  margin-top: 40px !important;
+}
+
+.bottom-content {
+  display: flex;
+  margin-top: 24px;
+  justify-content: space-between;
+  color: rgba(0, 47, 52, .64);
+}
+
+h1.itemTitle {
+  font-weight: 400;
+  margin: 0;
+  font-size: 16px;
+  color: rgba(0, 47, 52, .64);
+  line-height: 24px;
+  word-break: break-word;
+}
+
+.wrap {
+  padding: 10px 0px 0px 20px;
+}
+
+.same {
+  margin: 0px 0px 25px 0px;
+}
+
+footer {
+  text-align: right;
+  color: #fff;
+  font-size: 12px;
+  padding: 22px 90px 10px 0px;
+  line-height: 18px;
+  background: #002f34;
+}
+
+.pro-detail-img {
+  width: 680px !important;
+  height: 500px !important;
+}
+
+.selname {
+  font-size: 16px;
+  color: #002f34;
+  text-transform: capitalize;
+}
+
+.sellerimg {
+  width: 68px;
+  height: 68px;
+  background-position: 50%;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 0;
+  position: relative;
+  background-image: url(https://apollo-singapore.akamaized.net:443/v1/files/h1e56655hknj1-IN/image;s=120x120);
+}
+
+.sellerdisc {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.uk-border-rounded {
+  padding: 5px;
+  margin: -2px 0px 0px 0px;
+}
+
+.uk-border-rounded {
+  padding: 5px;
+  margin: -2px 0px 0px 0px;
+}
+
+.uk-card-body.uk-border-rounded {
+  border: 1px solid rgba(0, 47, 52, .2);
+}
+
+.sellerdesc {
+  font-size: 20px;
+  color: #002f34;
+  padding: 8px 0 !important;
+}
+
+.cont-left {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0, 47, 52, .36);
+  padding-top: 16px;
+}

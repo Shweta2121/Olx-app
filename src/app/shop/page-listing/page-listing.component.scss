@@ -10,9 +10,9 @@
   line-height: 1.4;
 }
 
-.uk-card-body {
-  border-left: 5px solid #f8dd3c;
-}
+// .uk-card-body {
+//   border-left: 5px solid #f8dd3c;
+// }
 
 .list-img {
   max-width: 70%;
@@ -40,7 +40,6 @@ footer {
 
 .last {
   display: flex;
-  margin-top: auto;
   justify-content: space-between;
   text-transform: uppercase;
   color: rgba(0, 47, 52, .64);

@@ -9,9 +9,10 @@
     <div class="uk-margin uk-grid-small uk-child-width-1-4@m uk-text-center" uk-grid>
       <span [title]="product.desc + ' product details'" *ngFor="let product of products">
         <div>
+          <div></div>
           <div class="uk-animation-toggle" tabindex="0">
             <div class="uk-margin uk-card uk-card-default uk-card-hover ">
-              <div class="uk-card-media-top">
+              <div class="uk-card-media-top" [routerLink]="['/products', product.id]">
                 <img class="list-img" src="{{product.images}}" alt="">
               </div>
               <div class="uk-card-body">

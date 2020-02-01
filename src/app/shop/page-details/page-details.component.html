@@ -1,0 +1,73 @@
+<div class="wrapper">
+  <div class="uk-container uk-padding">
+    <div class="uk-grid uk-grid-collapse uk-margin" data-uk-grid>
+      <div class="uk-card-media-left uk-cover-container uk-width-3-5@s">
+        <div class="image-detail">
+          <img class="pro-detail-img" src="{{ productdetails.images }}" alt="jEqyV_rumuU">
+        </div>
+        <div class="uk-card-body desscription ">
+          <div class="head">
+            <div class="title">
+              <h1>Description</h1>
+            </div>
+            <div class="desc-cont">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorem eius pariatur omnis. Sit
+              facilis laborum asperiores incidunt, quas est impedit iste adipisci obcaecati pariatur, nobis, doloremque
+              enim aliquam ratione!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, quibusdam saepe animi nihil dignissimos
+              voluptatibus totam culpa quia, dolore quo illo corporis quos possimus, magnam voluptates. Nisi delectus
+              porro praesentium.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta modi itaque eaque quae dolorum temporibus
+              nemo incidunt illum ipsa quibusdam excepturi repellendus non praesentium doloribus, harum aliquid nihil
+              repudiandae magni!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium blanditiis qui accusantium in veniam.
+              Minima voluptates iusto neque doloremque corrupti accusamus, aperiam hic rerum repellat explicabo
+              blanditiis rem voluptatibus ut?
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-2-5@s uk-border-rounded">
+        <div class="uk-card-body uk-border-rounded ">
+          <div class="cont-left">
+            <h3 class="uk-card-title uk-border-rounded">₹ {{productdetails.price}}</h3>
+            <h1 class="itemTitle">{{productdetails.desc}}</h1>
+            <div class="bottom-content">
+              <span class="loc">Kariavattom, Thiruvananthapuram, Kerala</span>
+              <span>{{productdetails.pdate}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body uk-border-rounded bottom-div">
+          <div class="cont-left">
+            <div class="sellerdesc">Seller description</div>
+            <div class="sellerdisc">
+              <div class="sellerimg"></div>
+              <div class="sel">
+                <div class="selname">
+                  Ramesh Kottakat</div>
+                <div class="seldate">{{productdetails.pdate}}</div>
+              </div>
+            </div>
+            <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Call</button>
+          </div>
+        </div>
+        <div class="uk-card-body uk-border-rounded bottom-div">
+          <div class="wrap">
+            <div class="details">
+              <h2>Details</h2>
+            </div>
+            <div class="same">Price : {{productdetails.price}}</div>
+            <div class="same">Name : {{productdetails.desc}}</div>
+            <div class="same">Location : {{productdetails.location}}</div>
+            <div class="same">Date : {{productdetails.pdate}}</div>
+            <div class="same">Category : {{productdetails.category}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>&copy; Copyright 2020</p>
+</footer>
