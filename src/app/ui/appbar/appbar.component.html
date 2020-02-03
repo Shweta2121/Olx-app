@@ -21,9 +21,13 @@
               </select>
             </div>
             <div class="search">
-              <input class="uk-search-input" type="search" placeholder="Find Cars, Mobile Phones and more...">
+              <input class="uk-search-input" type="text" [formControl]="filter"
+                placeholder="Find Cars, Mobile Phones and more...">
               <span class="searchicon" uk-search-icon></span>
             </div>
+            <!-- <ul>
+              <li *ngFor="let state of filteredproduct$ | async">{{state.desc}}</li>
+            </ul> -->
           </div>
           <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
@@ -40,16 +44,18 @@
     </div>
     <div class="middle-nav">
       <div class="uk-container">
-        <div class="category">
-          <div class="cat">All CATEGORIES</div>
-          <div class="cat">Cars</div>
-          <div class="cat">Motorcycles</div>
-          <div class="cat">Mobile Phones</div>
-          <div class="cat">For Sale:Houses & Apartment</div>
-          <div class="cat">Scooters</div>
-          <div class="cat">Commercial Vehicles</div>
-          <div class="cat">For Rent:Houses & Apartment</div>
-        </div>
+
+        <!-- <div class="category" formControlName=" categoryId" (click)="(click)=" initForm(categoryId)">
+          <div value="null" class="cat">All Categories</div>
+          <div *ngFor="let category of categories " class="cat">{{category.name}}</div>
+        </div> -->
+
+        <select class="category" formControlName="categoryId">
+          <option class="cat" value="null">All Categories</option>
+          <option class="cat" *ngFor="let category of categories " [value]="category.id" [innerHtml]="category.name">
+          </option>
+        </select>
+
       </div>
     </div>
   </div>

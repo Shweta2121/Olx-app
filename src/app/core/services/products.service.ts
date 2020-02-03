@@ -6,7 +6,7 @@ import { DataService } from "../classes/data-service";
   providedIn: "root"
 })
 export class ProductsService extends DataService<IProductModel> {
-  private productDataDump: IProductModel[] = [
+  public productDataDump: IProductModel[] = [
     {
       id: 1,
       images: "../../../assets/image/products/cars/car1.webp",
@@ -14,7 +14,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Hyundai Elite I20 Sportz 1.2, 2018, Petrol",
       location: 1,
       pdate: "5 days ago",
-      category: "car",
+      category: 1,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -26,7 +26,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Mahindra Others, 2011, Diesel",
       location: 2,
       pdate: "Today",
-      category: "car",
+      category: 1,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -38,7 +38,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Maruti Suzuki Eeco 5 STR WITH A/C+HTR, 2017, Petrol",
       location: 3,
       pdate: "Today",
-      category: "car",
+      category: 1,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -50,7 +50,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Maruti Suzuki Alto 800 Lxi, 2016, Petrol",
       location: 4,
       pdate: "Today",
-      category: "car",
+      category: 1,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -62,7 +62,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Tata Indigo Ecs eCS LS TDI, 2015, Diesel",
       location: 5,
       pdate: "Today",
-      category: "car",
+      category: 1,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -74,7 +74,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "ROYAL ENFILED 1988 MODEL",
       location: 1,
       pdate: "6 days ago",
-      category: "Motor Cycle",
+      category: 2,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -86,7 +86,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "thunderbird 350 modified",
       location: 2,
       pdate: "Today",
-      category: "Motor Cycle",
+      category: 2,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -98,7 +98,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Yamaha RX 100",
       location: 3,
       pdate: "Today",
-      category: "Motor Cycle",
+      category: 2,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -110,7 +110,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Royal Enfield Diesel Bullet Model 2000 RS 125000",
       location: 4,
       pdate: "Today",
-      category: "Motor Cycle",
+      category: 2,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -122,7 +122,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Foreign bike for ugent sale",
       location: 5,
       pdate: "Jan 23",
-      category: "Motor Cycle",
+      category: 2,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -134,7 +134,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "11 Pro Max Green 64Gb one month used",
       location: 1,
       pdate: "Today",
-      category: "Mobile Phones",
+      category: 3,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -146,7 +146,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Sell or exchange my galaxy s8",
       location: 2,
       pdate: "Today",
-      category: "Mobile Phones",
+      category: 3,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -158,7 +158,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Samsung s6 clean set",
       location: 3,
       pdate: "Today",
-      category: "Mobile Phones",
+      category: 3,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -170,7 +170,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Samsung a50 new 4months used 4gb 64 full box warranty",
       location: 4,
       pdate: "Today",
-      category: "Mobile Phones",
+      category: 3,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -182,7 +182,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Oppo F7 4/64 gb",
       location: 5,
       pdate: "Today",
-      category: "Mobile Phones",
+      category: 3,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -194,7 +194,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "4 cent only one customised villa in kazhakkoottam Menamkulam",
       location: 1,
       pdate: "Jan 18",
-      category: "Sale House and Apartment",
+      category: 4,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -206,7 +206,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "One BHK furnished Digital Flat",
       location: 2,
       pdate: "Jan 18",
-      category: "Sale House and Apartment",
+      category: 4,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -218,7 +218,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "4 BHK new House",
       location: 3,
       pdate: "Dec 19",
-      category: "Sale House and Apartment",
+      category: 4,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -230,7 +230,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "New 1811sqft House For Sale",
       location: 4,
       pdate: "Today",
-      category: "Sale House and Apartment",
+      category: 4,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -242,7 +242,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Ready to move House LNCPE",
       location: 5,
       pdate: "Today",
-      category: "Sale House and Apartment",
+      category: 4,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -254,7 +254,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Yamaha rayzr for sale",
       location: 1,
       pdate: "Today",
-      category: "Scooter",
+      category: 5,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -266,7 +266,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "New Dio show room condition",
       location: 2,
       pdate: "Today",
-      category: "Scooter",
+      category: 5,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -278,7 +278,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "black colour,good condition,company spares.",
       location: 3,
       pdate: "Today",
-      category: "Scooter",
+      category: 5,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -290,7 +290,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "TvswegoForsale",
       location: 4,
       pdate: "Today",
-      category: "Scooter",
+      category: 5,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -302,7 +302,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Honda Aviator 2014",
       location: 5,
       pdate: "Today",
-      category: "Scooter",
+      category: 5,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -314,7 +314,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "2015 model Tata ace ht",
       location: 1,
       pdate: "Today",
-      category: "Vehicles",
+      category: 6,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -326,7 +326,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Sports #willy #open #closed #thar #modifiedjeeps",
       location: 2,
       pdate: "Today",
-      category: "Vehicles",
+      category: 6,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -338,7 +338,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Mahindra thar for sale 2 wd perfec condition all pepper clear",
       location: 3,
       pdate: "Today",
-      category: "Vehicles",
+      category: 6,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -350,7 +350,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Petol Auto 2013,Next Test 9/2021, paper Clear",
       location: 4,
       pdate: "Today",
-      category: "Vehicles",
+      category: 6,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -362,7 +362,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "Swaraj Mazda tipper",
       location: 5,
       pdate: "Today",
-      category: "Vehicles",
+      category: 6,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -374,7 +374,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "2 BHK House - near Kariavattom - ideal for families -Technopark, LNCPE",
       location: 1,
       pdate: "Today",
-      category: "Rent House and Apartment",
+      category: 7,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -386,7 +386,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "3 BED ROOM APARTMENT FOR RENT AT KANIYAPURAM NEAR TECHNOCITY",
       location: 2,
       pdate: "Today",
-      category: "Rent House and Apartment",
+      category: 7,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -398,7 +398,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "New apartment with branded fitting s behind green field stadium",
       location: 3,
       pdate: "Today",
-      category: "Rent House and Apartment",
+      category: 7,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -410,7 +410,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "House for rent at powdikonam gandhinagar jn",
       location: 4,
       pdate: "Today",
-      category: "Rent House and Apartment",
+      category: 7,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true
@@ -422,7 +422,7 @@ export class ProductsService extends DataService<IProductModel> {
       desc: "3 bhk for rent",
       location: 5,
       pdate: "Today",
-      category: "Rent House and Apartment",
+      category: 7,
       createdAt: new Date(),
       modifiedAt: new Date(),
       isActive: true

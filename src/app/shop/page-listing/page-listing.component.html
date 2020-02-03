@@ -7,9 +7,12 @@
   <div class="uk-container">
     <h3 class="house">Fresh recommendations</h3>
     <div class="uk-margin uk-grid-small uk-child-width-1-4@m uk-text-center" uk-grid>
+      <!-- <input type="text" [formControl]="filter" placeholder="Filter states..."> -->
       <span [title]="product.desc + ' product details'" *ngFor="let product of products">
         <div>
-          <div></div>
+          <!-- <span [title]="product.desc + ' product details'" *ngFor="let product of filteredproduct$ | async">
+        {{product.desc}}
+          <div> -->
           <div class="uk-animation-toggle" tabindex="0">
             <div class="uk-margin uk-card uk-card-default uk-card-hover ">
               <div class="uk-card-media-top" [routerLink]="['/products', product.id]">

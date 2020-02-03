@@ -9,6 +9,7 @@ import { take } from 'rxjs/operators';
 export class FilterService {
   private _filterProducts: IFilterModels = {
     location: null,
+    category: null,
   };
 
   private behavioursubject$: BehaviorSubject<IFilterModels> = new BehaviorSubject<IFilterModels>(this._filterProducts);
@@ -17,12 +18,19 @@ export class FilterService {
 
   constructor() { }
 
-  get filter() {
+  get filtersserve() {
     return this.filterObs;
   }
   async filterLocation(location: number) {
-    const currentFilter = await this.filter.pipe(take(1)).toPromise();
+    const currentFilter = await this.filtersserve.pipe(take(1)).toPromise();
     const currentItems = currentFilter.location = location;
+    this.behavioursubject$.next(currentFilter);
+    return currentFilter;
+  }
+  async filterCategory(category: number) {
+    console.log(category)
+    const currentFilter = await this.filtersserve.pipe(take(1)).toPromise();
+    const currentItems = currentFilter.category = category;
     this.behavioursubject$.next(currentFilter);
     return currentFilter;
   }

@@ -6,7 +6,7 @@ export interface IProductModel extends IDataModel {
     desc: string;
     location: number;
     pdate: string;
-    category: string;
+    category: number;
 }
 export interface ILocationModel extends IDataModel {
     name: string;
@@ -14,4 +14,8 @@ export interface ILocationModel extends IDataModel {
 
 export interface IFilterModels extends IDataModel {
     location: number,
+    category: number,
+}
+export interface ICategoryModel extends IDataModel {
+    name: string;
 }
