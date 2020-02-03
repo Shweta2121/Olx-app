@@ -1,0 +1,19 @@
+<form [formGroup]="filterForm">
+    <aside id="left-col" class="uk-section uk-section-default uk-light">
+      <ul class="uk-list">
+        <li>
+          <div class="uk-block">
+            <span>Sort by</span>
+          </div>
+          <div>
+            <select formControlName="sortBy">
+              <option value="null">By relevance</option>
+              <option value="1">By price low to high</option>
+              <option value="2">By price high to low</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </aside>
+  </form>
+  

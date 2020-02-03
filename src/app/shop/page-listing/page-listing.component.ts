@@ -50,7 +50,17 @@ export class PageListingComponent implements OnInit {
   async initProduct() {
     this.filterSubcriber = this.filterserve.filtersserve.subscribe(async f => {
       this.filters = f;
-      this.products = await this.productDB.list(x => (f.category == null || x.category == f.category) && (f.location == null || x.location == f.location));
+      this.products = await this.productDB.list(x => (f.category == null || x.category == f.category)
+       && (f.location == null || x.location == f.location)
+        );
+      if (f.sorting === 1) {
+     this.products  = this.products.sort(function(a,b){return parseFloat(a.price) - parseFloat(b.price);
+     })
+      }
+      if (f.sorting === 2) {
+        this.products = this.products.sort(function(a,b){ return parseFloat(b.price) - parseFloat(a.price);
+        })
+      }
     });
   }
 }

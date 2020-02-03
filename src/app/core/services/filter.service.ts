@@ -10,6 +10,7 @@ export class FilterService {
   private _filterProducts: IFilterModels = {
     location: null,
     category: null,
+    sorting: null,
   };
 
   private behavioursubject$: BehaviorSubject<IFilterModels> = new BehaviorSubject<IFilterModels>(this._filterProducts);
@@ -26,11 +27,18 @@ export class FilterService {
     const currentItems = currentFilter.location = location;
     this.behavioursubject$.next(currentFilter);
     return currentFilter;
-  }
+  } 
   async filterCategory(category: number) {
     const currentFilter = await this.filtersserve.pipe(take(1)).toPromise();
     const currentItems = currentFilter.category = category;
     this.behavioursubject$.next(currentFilter);
     return currentFilter;
   }
+  async filterSort(sorting: number) {
+    const currentFilter = await this.filtersserve.pipe(take(1)).toPromise();
+    const currentItems = currentFilter.sorting = sorting;
+    this.behavioursubject$.next(currentFilter);
+    return currentFilter;
+  }
+
 }

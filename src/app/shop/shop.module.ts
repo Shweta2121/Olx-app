@@ -6,9 +6,10 @@ import { CoreModule } from "../core/core.module";
 import { PageDetailsComponent } from './page-details/page-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
-  declarations: [PageListingComponent, PageDetailsComponent],
+  declarations: [PageListingComponent, PageDetailsComponent, FilterComponent],
   imports: [
     CommonModule, ShopRoutingModule, CoreModule, HttpClientModule, FormsModule, ReactiveFormsModule
   ],

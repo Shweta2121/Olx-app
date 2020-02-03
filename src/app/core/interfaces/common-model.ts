@@ -2,7 +2,7 @@ import { IDataModel } from "./data-model";
 
 export interface IProductModel extends IDataModel {
     images: string;
-    price: string;
+    price: number;
     desc: string;
     location: number;
     pdate: string;
@@ -15,6 +15,7 @@ export interface ILocationModel extends IDataModel {
 export interface IFilterModels extends IDataModel {
     location: number,
     category: number,
+    sorting:number,
 }
 export interface ICategoryModel extends IDataModel {
     name: string;
