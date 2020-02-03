@@ -44,18 +44,10 @@
     </div>
     <div class="middle-nav">
       <div class="uk-container">
-
-        <!-- <div class="category" formControlName=" categoryId" (click)="(click)=" initForm(categoryId)">
+        <div class="category">
           <div value="null" class="cat">All Categories</div>
-          <div *ngFor="let category of categories " class="cat">{{category.name}}</div>
-        </div> -->
-
-        <select class="category" formControlName="categoryId">
-          <option class="cat" value="null">All Categories</option>
-          <option class="cat" *ngFor="let category of categories " [value]="category.id" [innerHtml]="category.name">
-          </option>
-        </select>
-
+          <div  (click)=" initChangeCategory(category.id)" *ngFor="let category of categories " class="cat">{{category.name}}</div>
+        </div>
       </div>
     </div>
   </div>

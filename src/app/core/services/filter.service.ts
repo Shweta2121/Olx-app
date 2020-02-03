@@ -28,7 +28,6 @@ export class FilterService {
     return currentFilter;
   }
   async filterCategory(category: number) {
-    console.log(category)
     const currentFilter = await this.filtersserve.pipe(take(1)).toPromise();
     const currentItems = currentFilter.category = category;
     this.behavioursubject$.next(currentFilter);

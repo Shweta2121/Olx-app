@@ -30,7 +30,6 @@ export class AppbarComponent implements OnInit {
   location: ILocationModel[] = [];
   filterForm: FormGroup;
   private formLocationChangeSub: Subscription;
-  private formCategoryChangeSub: Subscription;
   constructor(private locationserve: LocationService,
     private fb: FormBuilder,
     private categoryDB: CategoriesService,
@@ -61,7 +60,6 @@ export class AppbarComponent implements OnInit {
   initForm() {
     this.filterForm = this.fb.group({
       LocationId: [null],
-      categoryId: [null],
     });
 
     this.formLocationChangeSub = this.filterForm.controls.LocationId.valueChanges.subscribe(
@@ -73,15 +71,8 @@ export class AppbarComponent implements OnInit {
         this.FilterServe.filterLocation(a);
       }
     );
-    this.formCategoryChangeSub = this.filterForm.controls.categoryId.valueChanges.subscribe(
-      res => {
-        console.log(res)
-        let a = null;
-        if (res !== "null") {
-          a = parseInt(res);
-        }
-        this.FilterServe.filterCategory(a);
-      }
-    );
+  }
+  initChangeCategory(categoryId){
+this.FilterServe.filterCategory(categoryId)   
   }
 }
